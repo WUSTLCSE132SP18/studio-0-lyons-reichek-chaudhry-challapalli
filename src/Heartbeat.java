@@ -2,12 +2,12 @@
 public class Heartbeat {
 
 	public static void main(String[] args) {
-		int time = 0;
+		float time = 0;
 		while(true){
 			
 			try{
 				Thread.sleep(1000);
-				time += 1;
+				time += System.currentTimeMillis() / 1000F;
 				System.out.println(time + " sec have elapsed");
 			}
 			catch(InterruptedException e){
